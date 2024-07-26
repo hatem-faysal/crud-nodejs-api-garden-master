@@ -1,0 +1,50 @@
+install expressjs mvc all
+1-https://expressjs.com/en/starter/generator.html
+npx express-generator
+
+Connected database with project Nodejs
+2-npm install --save knex pg        
+
+Create file knex init
+3-npx knex init
+
+Create file gitignore
+4-npx gitignore node 
+
+
+5-install postgresql
+https://www.postgresql.org/download/linux/ubuntu/
+
+6- open postgres
+sudo -i -u postgres
+psql
+
+7-sql postgres
+https://www.postgresqltutorial.com/postgresql-administration/postgresql-show-databases/#:~:text=Use%20%5Cl%20or%20%5Cl%2B%20in,pg_database%20to%20get%20all%20databases.
+
+8-get all database with postgres
+SELECT datname FROM pg_database;
+
+8.5-choose any database psql cjs-web-store
+
+9-create database open (sudo -i -u postgres)
+createdb cjs-web-store
+
+9-create table with migration 
+npx knex migrate:make create-sticker
+
+10-\conninfo 
+
+11-npx knex migrate:latest
+
+12-connection: "postgres://myuser:mypass@ip:port/mydb"
+
+13-create seeder
+npx knex seed:make 01_sticker
+
+14-run seeder
+npx knex seed:run
+
+15-npm install nodemon --save-dev
+
+16-npm install --save-dev mocha chai supertest

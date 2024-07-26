@@ -1,0 +1,8 @@
+1- get  database
+psql cjs-web-store
+
+2-get  table 
+\d sticker
+
+3-get data in table
+select * from sticker
